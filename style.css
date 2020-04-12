@@ -1,0 +1,891 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+
+/* Basic settings */
+body, html {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #222;
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+ul, li {
+    margin: 0;
+    list-style: none;
+}
+
+.fa {
+    font-size:16px;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+img:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+
+a:focus,button:active, button:focus {
+    outline: none;
+  }
+
+a:hover {
+    color: #e01212;
+    text-decoration: none;
+    transition: 1s ease all;
+}
+
+i:hover {
+    color: #e01212;
+    text-decoration: none;
+    transition: 1s ease all;
+    cursor: pointer;
+}
+
+header {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.topBar {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Параметры тени */
+}
+
+.topBar .container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center; /* выравнивание по перекрест. оси */
+    padding: 10px 0;
+}
+
+.container {
+        flex-wrap: wrap;
+        display: flex;
+        margin: 0 auto;        
+}
+
+.topBar .container div {
+    display: block; 
+}
+
+
+#topCurrentDate #today {
+    font-weight: 500;
+    border-right: 1px solid #afadad;
+    padding-right: 8px;
+    font-size: 13px;
+    
+}
+
+#topCurrentDate #date {
+    text-transform: uppercase;
+    font-size: 11px;
+    padding-left: 6px;
+}
+
+/* новости */
+
+#topBreakingNews {
+    display: flex;
+    white-space: nowrap;
+    align-items: center; 
+    max-width: 520px;
+    
+}
+
+#topBreakingNews span {
+    padding-right: 8px;
+    font-size: 16px;
+}
+
+#topBreakingNews i {
+    padding-right: 8px;
+}
+
+#runRow {
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden; /* чтобы не выходило за предел блока */
+   
+}
+
+#runRow ul {
+    display: inline-block;
+    animation: move 17s infinite linear;
+    padding-left: 100%;
+}
+
+#runRow ul li {
+    display: inline-block;
+    padding-right: 40px;
+    font-size: 12px;
+    color: #222;
+}
+
+#runRow ul:hover {
+    animation-play-state: paused;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0)
+    }
+}
+
+
+/* конец новостей */
+
+#topSocialIcon i {
+    padding-left: 10px; 
+}
+
+.logoSection {
+    padding: 0;
+    margin:0;
+}
+
+.logoSection > .container{
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.logoSection .container div{
+    display: block;
+ 
+}
+
+.menuSection {
+    padding-bottom: 20px;;
+}
+
+.menuSection .container{
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+  /*  border: 2px solid gray;*/
+}
+
+
+
+.menuSection .container > div {
+    display: block;
+   /* border: 2px solid hotpink;  */
+   align-items: center;
+}
+
+#navigation *{
+    margin: 0;
+    padding: 0;
+}
+
+#navigation ul li a:hover{
+    color: #828282;
+}
+
+#navigation > ul{
+    display: flex;
+    justify-content: center;
+   /* border: 2px solid red;*/
+    
+}
+
+.hamburgerButton {
+    border: none;
+    background-color: transparent;
+
+}
+
+.hamburgerButton > i{
+    font-size: 30px;
+}
+
+
+#mainMenu {
+    justify-content: flex-start;
+
+}
+#mainMenu > li > a{
+    display:block;
+    font-weight: 550;
+    text-transform: uppercase;
+    padding: 10px 40px 10px 10px;
+   
+}
+#mainMenu i{
+    padding-left: 13px;
+   
+}
+.subMenu {
+    position: absolute;
+    min-width: 250px;
+
+    display: none; /* спрятали саб-меню */
+}
+
+#navigation .subMenu > li  a {
+    display:block;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+ }
+
+ .subMenu > li {
+    background:  #f3f3f3;
+    border-bottom: 1px solid #c7c8ca; 
+}
+
+.menuSection i:hover {
+    color: #828282; 
+}
+
+.subMenu > li:last-child {
+    border-bottom: none;
+}
+
+#mainMenu li:hover > ul {
+    display: block; /* при наведении показывается */ 
+}
+
+/* поле для поиска*/            
+                    
+#innerContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#searchIcon {
+   position: relative;
+}
+
+.searchButton {
+     padding: 0;
+    margin: 0;
+    border: 1px solid #171717;
+    cursor: pointer;
+       height: 35px;
+     width: 35px;
+    font-size: 16px;
+    text-align: center;
+    background: transparent;
+}
+
+.searchButton:hover{
+    background: #171717;
+    color: white;
+}
+
+.searchButton i:hover{
+    color: white;
+}
+
+#searchBlock {
+    background: #fff;
+    padding: 10px;
+    width:280px;   
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+#searchBlock input {
+    border: 1px solid #eee;
+    background: #fff;
+    height: 30px;
+    padding: 5px 15px;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+#searchBlock #submitSearch {
+    background: #e01212;
+    color: #fff;
+    height: 41px;
+    border: none;
+}
+
+#searchBlock #submitSearch:hover {
+    cursor: pointer;
+}
+
+#searchIcon:hover #searchBlock {
+    display: block !important;
+}
+
+#mobileMenuIcon > span{
+   padding-left: 5px;
+}
+
+#mobileMenuIcon > button {
+    border: none;
+    background-color: transparent;
+    padding: 13px;
+    color: white;
+}
+
+
+/*main*/
+
+
+main {
+    width: 100%;
+    z-index: 0;
+}
+
+/*Слайдер*/
+
+
+
+
+
+.bannerSlider {
+ 
+    background-image: url(media/backSlider.jpg);  
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    background-attachment: fixed;
+    position: relative;
+    padding: 60px 0;
+}
+
+.bannerSlider > .container{
+    min-width: 0;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 500px;
+    position: relative;
+   
+}
+ .mainSlide .slider .slide {
+    
+    background-size: cover;
+    background-repeat: no-repeat;   
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.mainSlide .slider .slide:focus {
+
+ outline: none;
+}
+
+  .container .mainSlide {
+    overflow: hidden;
+    min-width: 0;
+    width: 100%;
+    position: relative; 
+    height: auto;
+} 
+.container .mainSlide .slider {
+    min-width: 0;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.container .slider .slick-arrow{
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    opacity: .8;
+    z-index: 15;
+    background: rgba(19, 18, 18, 0.5);
+    border: none;
+    height: 50px;
+    width: 40px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.container .slider .slick-arrow.prev {
+    left: 0px;
+}
+
+.container .slider .slick-arrow.next {
+    right: 0px;
+}
+
+.bannerSlider .container .slider .slick-list .slick-track {
+    height: 500px;
+    display: flex;
+}
+
+
+#innerBannerContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    padding-left: 30px;
+    width: 520px;
+
+}
+
+#innerBannerContainer  div{
+    display: block;
+    flex: 1 1;
+}
+
+.ImgBanner {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.Caption  {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    bottom: 0px;
+    left: 0px;
+    padding: 15px;
+
+}
+.mainTitle{
+
+    overflow: hidden;
+    position: relative;
+
+}
+
+.mainTitle > h2{
+    text-transform: uppercase;
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.mainTitle h2:after {
+    position: absolute;
+    /* Обязательно указываем пустое свойство content, 
+    ** иначе псевдоэлементы не появятся на сайте */
+    content: '';
+    top: 50%;
+    /* Задаем ширину 100% и выбираем высоту линии, 
+    ** в нашем примере она равна 4 пикселям */
+    width: 100%;
+    height: 2px;
+    /* Добавляем цвет для линии */
+    background-color: #e01212;
+    margin-left: 30px;
+}
+
+.Caption * {
+    color: white;
+}
+
+.Сaption .Title {
+    font-weight: 500;
+}
+
+.Caption .Title a:hover {
+    text-decoration: underline;
+    color: #ddd;
+}
+
+
+.innerCaption {
+    display: inline-block;
+}
+
+.innerCaption *:hover {
+    color: rgb(156, 156, 156);
+}
+
+.innerDate > i {
+    padding-right: 7px;
+    border-right: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.innerComments {
+    margin-left: 40px;
+}
+
+.innerComments  a {
+    padding-left: 8px;
+}
+
+.innerPostedDate {
+    font-size: 12px;
+}
+
+/*Первая секция с контентом*/
+
+.contentSection {
+    width: 100%;
+}
+
+                
+.contentSection .container {
+    padding: 40px 0;
+    flex-direction: column;
+    
+}
+
+.contentSection .contentBlocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding:  20px 0;
+}
+
+
+.itemCol{
+    width: 31%;
+    position: relative;
+}
+
+
+.itemCol .ImgBanner {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.itemCol > .ImgBanner .Сaption {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    bottom: 0;
+
+}
+
+.itemCol .innerCaption {
+    margin: 0 auto;
+    padding: 0;
+  
+}
+
+.titleField  h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 auto ;
+    padding: 15px 0;
+}
+
+.catCaption {
+    position: relative;
+    overflow: hidden;
+}
+
+.catCaption > a {
+    background-color: #e01212;
+    font-size: 10px;
+    padding-left:17px;
+    padding-right: 4px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color:white;
+}
+
+.catCaption > a:hover {
+  color: white; opacity: .6;
+}
+
+
+.catCaption > a:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    /* Задаем ширину 100% и выбираем высоту линии, 
+    ** в нашем примере она равна 4 пикселям */
+    width: 100%;
+    height: 2px;
+    /* Добавляем цвет для линии */
+    background-color: white;
+    margin-left: -101%;
+}
+
+
+
+.itemCol .ImgBanner .Caption:hover {
+    padding-bottom: 30px;
+    transition: 0.5s ease all;
+}
+
+.Caption {
+    transition: 0.5s ease all;
+}
+
+.blockList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.blockList > div {
+    
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    height: fit-content;
+    align-items: flex-start;
+}
+
+.blockList .itemList {  
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row ;
+    justify-content: space-between !important;
+}
+
+.itemList  > div { 
+    display: inline-block;
+    height: 100% ;
+}
+
+  .imgList {
+    height:auto;
+    width: 40%;
+}
+
+
+
+.imgList > img{
+    height: auto;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.imgList > img:hover {
+    transform: scale(1.2);
+}
+
+.blockList .itemList .captionList{
+    width:60%;
+ 
+    height: 100%;
+    padding-left: 15px;
+    /* border: 2px solid rgb(194, 170, 33); */
+  
+}
+
+  
+.blockList .catCaption > a {
+
+    padding: 2px 5px;
+    margin-right: 7px;
+  
+}
+
+.titleList {
+    line-height: 1.5;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+.itemList .catCaption a:before {
+  display: none;
+}
+
+/* laptop L */
+@media  (min-width: 1200px) {
+        .container {
+            max-width: 1140px;
+        }
+        #mobileMenuIcon {
+            display: none;
+        }
+}
+
+    /* laptop */
+
+@media (max-width: 1200px) and (min-width: 992px) {
+    .container {
+            max-width: 960px;
+        }
+    
+    #mobileMenuIcon {
+        display: none;
+    }
+
+}
+
+/* tablet */
+@media (max-width: 992px) {
+    .container {
+            max-width: 720px;   
+        }
+
+    .container #topBreakingNews {
+        max-width: 100%;
+        }
+
+    .topBar > .container {
+        flex-direction: column;
+        }
+
+    #mobileMenuIcon {
+        display: block;
+    }
+
+    #navigation {
+        display: none;
+        width: 100% !important;
+        order: 3;
+    }
+    #mainMenu {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .menuSection {
+        background: #f31414;
+        padding: 10px 10px;
+    }
+
+    #mainMenu > li > a{
+        color:white;
+        font-weight: 500;
+    }
+
+    #mainMenu > li {
+        background:  #ca131393;
+        border-bottom: 1px solid #f31414;
+    }
+
+    #mainMenu i{
+        float: right;
+        font-size: 25px;
+    }
+
+    .subMenu {
+        position: relative;
+    }
+
+    .subMenu > li {
+        background:  #ca131393;
+        border-bottom: 1px solid #f31414;
+    }
+
+    .subMenu > li > a{
+        color: rgba(240, 238, 238, 0.979);
+    }
+
+
+    .bannerSlider >.container {
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        justify-content: flex-start;
+    }
+
+    .bannerSlider >.container > div{
+        height: 500px;
+        padding: 0;
+        margin: 0 auto;
+  
+    }
+
+    .bannerSlider > .container > .mainSlide {
+        height: 250px;
+        margin-bottom: 30px;
+    }
+    .bannerSlider .container .slider .slick-list .slick-track {
+        height: 250px;
+    
+    }
+ 
+    #innerBannerContainer {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .contentSection .contentBlocks {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contentSection .contentBlocks .itemCol {
+        flex-direction: column;
+        width: 100%;
+      flex-wrap: wrap;
+    }
+    
+    .itemCol  {
+        width: 100%;
+    }
+
+    .blockList > div{
+        width: 100%;
+    }
+
+    .imgList > img:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* mobile */
+
+@media (max-width: 768px) and (min-width: 576px) {
+    .container {
+        max-width: 540px !important;
+    }
+
+    .container #topBreakingNews {
+        max-width: 100%;
+        }
+
+    .topBar > .container {
+        flex-direction: column;
+    }
+}
+
+/* mobile s */
+
+@media (max-width: 576px) {
+
+    .container {       
+        max-width: 100%;       
+    }
+
+    .topBar .container {
+        flex-direction: column;
+    }
+
+    .container #topBreakingNews {
+        max-width: 100%;
+        margin: 0;
+        }
+}
+
